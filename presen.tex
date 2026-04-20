@@ -1,0 +1,124 @@
+\documentclass{beamer}
+\usetheme{Berlin}
+\usecolortheme{wolverine}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\title{Visualización y análisis de funciones de dos variables: dominio, curvas de nivel, trazas y tasas de cambio usando MATLAB}
+\author{Nora Carolina Servellón}
+\institute[EMCC-UNAH]{\textit{Escuela de Matem\'aticas y Ciencias de la Computaci\'on}\\ \textbf{Universidad Aut\'onoma de Honduras}}
+\date{Abril 2026}
+\logo{\includegraphics[width=0.2\textwidth]{img/unah.png}
+\includegraphics[width=0.12\textwidth]{img/facultad.jpeg}}
+
+\begin{document}
+
+% 1: Portada
+\begin{frame}
+\titlepage
+\end{frame}
+
+% 2: Índice 
+\begin{frame}{Contenido e Introducción}
+\tableofcontents
+\end{frame}
+
+% 3: Introducción
+\begin{frame}{Introducción}
+\textbf{Introducción:} Las funciones de dos variables \(z=f(x,y)\) son fundamentales en cálculo multivariable. Sin embargo, visualizar su dominio, forma y comportamiento es un reto. Con MATLAB exploraremos gráficas 3D, curvas de nivel y tasas de cambio para comprender conceptos como pendiente y dirección de máximo ascenso.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.25\linewidth]{img/matlab.png}
+\end{figure}
+\end{frame}
+
+
+% 4: Conceptos clave
+\section{Conceptos clave}
+\begin{frame}{Conceptos clave}
+\begin{itemize}
+\item \textbf{Dominio}: región del plano donde la función está definida.
+\item \textbf{Gráfica}: superficie \(z=f(x,y)\) en el espacio 3D.
+\item \textbf{Trazas verticales}: intersección con planos \(x=a\) o \(y=b\).
+\item \textbf{Curvas de nivel}: conjunto \(f(x,y)=c\) en el plano \(xy\).
+\item \textbf{Tasa de cambio}: variación de \(f\) al moverse en una dirección.
+\end{itemize}
+\end{frame}
+
+
+% 5: Dominio y superficies
+\section{Domionio y Superficies}
+\begin{frame}{Dominio y superficies}
+\begin{columns}[T]
+\column{0.33\textwidth}
+\textbf{Dominio:} 
+\vspace{1cm}
+\includegraphics[width=1\textwidth]{img/dominio.eps}
+\column{0.33\textwidth}
+\textbf{Superficies:}\\
+\includegraphics[width=1\textwidth]{img/paraboloide.eps}\\
+Paraboloide elíptico \(2x^2+5y^2\)\\
+\column{0.33\textwidth}
+\includegraphics[width=1\textwidth]{img/hiperbolico.eps}\\
+Paraboloide hiperbólico\\ \(x^2-3y^2\)
+\end{columns}
+\end{frame}
+
+% 6: Curvas de nivel y pendiente
+\section{Curvas de nivel y pendiente}
+\begin{frame}{Curvas de nivel y pendiente}
+\begin{columns}[T]
+\column{0.35\textwidth}
+\textbf{Mapas de contorno:}
+\includegraphics[width=0.9\textwidth]{img/contorno_parab.eps}\\
+Curvas de nivel del paraboloide elíptico
+\column{0.35\textwidth}
+\vspace{0.4cm}
+\includegraphics[width=0.9\textwidth]{img/contorno_hip.eps}\\
+Curvas de nivel del paraboloide hiperbólico
+\vspace{0.5cm}
+\column{0.3\textwidth}
+\textbf{Relación:} A menor espaciamiento entre curvas, mayor pendiente de la superficie.
+\end{columns}
+\end{frame}
+
+% 7: Tasa de cambio y gradiente
+\section{Tasa de cambio y gradiante}
+\begin{frame}{Tasa de cambio y gradiente}
+\begin{itemize}
+\item Sobre el plano \(f(x,y)=12-2x-3y\):
+\begin{align*}
+\text{Tasa}(A\to B) &= -2,\quad A=(0,0), B=(1,0)\\
+\text{Tasa}(A\to C) &= -3,\quad C=(0,1)
+\end{align*}
+\item \textbf{Gradiente numérico} en \(A\): \(\nabla f \approx (-2,-3)\)
+\item \textbf{Dirección de máximo ascenso}: \(\frac{(2,3)}{\sqrt{13}}\)
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.35\textwidth]{img/ascenso.eps}
+\end{center}
+\end{frame}
+
+% 8: Conclusiones 
+\section{Conclusiones}
+\begin{frame}{Conclusiones}
+\begin{itemize}
+\item MATLAB permite visualizar dominio, superficies y curvas de nivel eficazmente.
+\item El espaciamiento de las curvas de nivel indica la pendiente de la superficie.
+\item La tasa de cambio depende de la dirección; el gradiente señala el máximo ascenso.
+\item El código desarrollado es reusable y educativo.
+\end{itemize}
+\end{frame}
+
+% 8: Conclusiones 
+\begin{frame}{Bibliografía}
+\section{Bibliograía}
+\begin{itemize}
+\item J. Stewart, \emph{Cálculo de varias variables}, Cengage, 2012.
+\item MathWorks, \emph{MATLAB Documentation}.
+\item Código fuente: \url{https://github.com/servelloncarol/proped-3}
+\end{itemize}
+\end{frame}
+
+\end{document}
